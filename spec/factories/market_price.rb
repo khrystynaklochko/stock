@@ -2,7 +2,7 @@
 
 FactoryGirl.define do
   factory :market_price do
-    value 19.39
+    value { Faker::Number.number(10) }
     currency 'EUR'
   end
 end

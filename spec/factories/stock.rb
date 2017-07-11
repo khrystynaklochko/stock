@@ -2,13 +2,15 @@
 
 FactoryGirl.define do
   factory :stock do
-    name 'New Stock'
+    name  { Faker::StarWars.character }
     bearer { build(:bearer) }
     market_price { build(:market_price) }
+    deleted false
   end
   factory :stock_2, class: Stock do
-    name 'Stock 2'
+    name  { Faker::StarWars.character }
     bearer { build(:bearer) }
     market_price { build(:market_price) }
+    deleted false
   end
 end

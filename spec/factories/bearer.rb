@@ -2,6 +2,6 @@
 
 FactoryGirl.define do
   factory :bearer do
-    name 'Me'
+    name { Faker::StarWars.character }
   end
 end
