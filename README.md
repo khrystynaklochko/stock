@@ -50,3 +50,4 @@ Market price has many stocks.
 
 Stock can be soft deleted by adding attribute deleted_at:true to stock obkect, by default - false.
 
+Routes are 
