@@ -3,4 +3,5 @@ class StockSerializer < ActiveModel::Serializer
 
   belongs_to :bearer
   belongs_to :market_price
+
 end

@@ -8,6 +8,7 @@ git_source(:github) do |repo_name|
 end
 gem 'active_model_serializers', '~> 0.10.6'
 gem 'annotate', '~> 2.7', '>= 2.7.2'
+gem 'api-pagination', '~> 4.6', '>= 4.6.3'
 gem 'dalli', '~> 2.7', '>= 2.7.6'
 gem 'money-rails', '~> 1.8'
 gem 'puma', '~> 3.0'
@@ -16,6 +17,7 @@ gem 'rack-cors', '~> 0.4.1'
 gem 'rails', '~> 5.0.2'
 gem 'rubocop', '~> 0.49.1'
 gem 'sqlite3'
+gem 'will_paginate', '~> 3.1', '>= 3.1.6'
 group :development, :test do
   gem 'faraday', '~> 0.12.1'
   gem 'pry', '~> 0.10.4'

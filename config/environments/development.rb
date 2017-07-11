@@ -18,9 +18,8 @@ Rails.application.configure do
       'Cache-Control' => 'public, max-age=172800'
     }
   else
-    config.action_controller.perform_caching = false
-
-    config.cache_store = :null_store
+    config.cache_store = :dalli_store
+    config.action_controller.perform_caching = true
   end
 
   # Don't care if the mailer can't send.

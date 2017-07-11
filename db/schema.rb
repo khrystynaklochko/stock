@@ -28,9 +28,9 @@ ActiveRecord::Schema.define(version: 201_707_111_539_44) do
     t.string   'name'
     t.integer  'bearer_id'
     t.integer  'market_price_id'
-    t.boolean  'deleted', default: true
+    t.boolean  'deleted', default: false
     t.datetime 'created_at', null: false
-    t.datetime 'updated_at', ull: false
+    t.datetime 'updated_at', null: false
     t.index ['bearer_id'], name: 'index_stocks_on_bearer_id'
     t.index ['market_price_id'], name: 'index_stocks_on_market_price_id'
   end

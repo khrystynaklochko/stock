@@ -1,6 +1,9 @@
 # frozen_string_literal: true
 
 class ApplicationController < ActionController::API
+  include Response
+  include ExceptionHandler
+
   before_action :ensure_json
 
   def ensure_json

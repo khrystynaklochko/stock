@@ -27,6 +27,14 @@ Reflect the explained logic and endpoints in rspec tests.
 Bonne chance and feel free to ask questions when you get totally stuck.
 
 ## Solution
+Features: 
+ * Added some security configs with rack attack (limit/request).
+ * You could also configure a cors.
+ * Caching.
+ * Pagination. (set :page param, max 10 per page)
+
+ For memcache run:
+ /usr/local/bin/memcached -vv (MACOS)
 
 To run app:
 
@@ -51,3 +59,9 @@ Market price has many stocks.
 Stock can be soft deleted by adding attribute deleted_at:true to stock obkect, by default - false.
 
 Routes are 
+
+Improvements are future feature configs etc.
+
+Rails.cache.clear()  - clear cache, usually in rake task.
+
+or Rails.cache.clear('stocks') - for 'stocks' key.
