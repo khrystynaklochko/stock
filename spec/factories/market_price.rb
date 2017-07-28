@@ -2,7 +2,7 @@
 
 FactoryGirl.define do
   factory :market_price do
-    value { Faker::Number.number(10) }
+    value_cents { Faker::Number.number(10) }
     currency 'EUR'
   end
 end

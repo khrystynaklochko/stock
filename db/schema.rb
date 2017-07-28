@@ -10,28 +10,30 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 201_707_111_539_44) do
-  create_table 'bearers', force: :cascade do |t|
-    t.string   'name'
-    t.datetime 'created_at', null: false
-    t.datetime 'updated_at', null: false
+ActiveRecord::Schema.define(version: 20170711153944) do
+
+  create_table "bearers", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
-  create_table 'market_prices', force: :cascade do |t|
-    t.string   'currency'
-    t.integer  'value_cents'
-    t.datetime 'created_at', null: false
-    t.datetime 'updated_at', null: false
+  create_table "market_prices", force: :cascade do |t|
+    t.string   "currency"
+    t.integer  "value_cents"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
-  create_table 'stocks', force: :cascade do |t|
-    t.string   'name'
-    t.integer  'bearer_id'
-    t.integer  'market_price_id'
-    t.boolean  'deleted', default: false
-    t.datetime 'created_at', null: false
-    t.datetime 'updated_at', null: false
-    t.index ['bearer_id'], name: 'index_stocks_on_bearer_id'
-    t.index ['market_price_id'], name: 'index_stocks_on_market_price_id'
+  create_table "stocks", force: :cascade do |t|
+    t.string   "name"
+    t.integer  "bearer_id"
+    t.integer  "market_price_id"
+    t.boolean  "deleted",         default: false
+    t.datetime "created_at",                      null: false
+    t.datetime "updated_at",                      null: false
+    t.index ["bearer_id"], name: "index_stocks_on_bearer_id"
+    t.index ["market_price_id"], name: "index_stocks_on_market_price_id"
   end
+
 end
